@@ -64,12 +64,16 @@ syntax on
 filetype on
 filetype plugin indent on
 
+" TaskList
 map <leader>td <Plug>TaskList
 
+" PyFlakes
 let g:pyflakes_use_quickfix = 0
 
+" PEP8
 let g:pep8_map='<leader>8'
 
+" SuperTab
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 let g:SuperTabDefaultCompletionType = "context"
 
