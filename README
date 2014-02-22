@@ -37,6 +37,9 @@ set guifont=Menlo\ Regular:h14
 " show line numbers
 set number
 
+" show end of line as a $ for python files
+au FileType python set list
+
 " try to apply the following encodings when a file is opened
 set fileencodings=ucs-bom,utf-8,default,cp1251,latin1
 
