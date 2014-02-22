@@ -1,0 +1,72 @@
+"This is a tipical .vimrc file I use
+"
+" ## Installation
+" 1. Open the terminal and go to your HOME
+" $ cd
+"
+" 2. clone the myvim repository to your HOME under .vim folder
+" $ git clone https://github.com/sergonsoft/myvim .vim
+"
+" 3. go to the .vim folder
+" $ cd .vim
+"
+" 4. init and update git submodules
+" $ git submodule init
+" $ git submodule update
+" $ git submodule foreach git submodule init
+" $ git submodule foreach git submodule update
+"
+" 5. make the symbolic a link .vimrc to the README file
+" $ ln -s ~/.vim/README ~/.vimrc
+"
+" 6. Enjoy your VIM
+
+"## .vimrc
+
+" Copywrite 2014 Sergey
+
+" setup font
+set guifont=Menlo\ Regular:h14
+
+" setup number of columns of the screen (the terminal's width)
+"set columns=83
+
+" setup number of lines of the Vim window (the terminal's height)
+"set lines=40
+
+" show line numbers
+set number
+
+" try to apply the following encodings when a file is opened
+set fileencodings=ucs-bom,utf-8,default,cp1251,latin1
+
+set expandtab
+"set textwidth=79
+set tabstop=8
+set softtabstop=4
+set shiftwidth=4
+set autoindent
+
+set colorcolumn=79
+
+" pathogen
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
+call pathogen#helptags()
+
+set foldmethod=indent
+set foldlevel=99
+
+syntax on
+filetype on
+filetype plugin indent on
+
+map <leader>td <Plug>TaskList
+
+let g:pyflakes_use_quickfix = 0
+
+let g:pep8_map='<leader>8'
+
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+let g:SuperTabDefaultCompletionType = "context"
+
